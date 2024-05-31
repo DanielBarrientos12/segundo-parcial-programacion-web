@@ -4,9 +4,11 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,7 +35,13 @@ public class MangaController {
 		return mangaService.getAllMangas();
 	}
 	
-	
+	@GetMapping("/{id}")
+	public Optional<Manga> getMangaById(@PathVariable Integer id) {
+	    Optional<Manga> manga = mangaService.findById(id);
+		return manga;
+	}
+
+
 	
 	
 }

@@ -1,6 +1,7 @@
 package com.ufps.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,10 @@ public class MangaService {
 	public List<Manga> getAllMangas(){
 		return mangaRepository.findAll();
 	}
+	
+	public Optional<Manga> findById(Integer id) {
+        return mangaRepository.findById(id);
+    }
 
     
 
