@@ -1,10 +1,7 @@
 # Segundo Parcial Programacion web
 
+
 ## Servicios en funcionamiento
-
-
-
-## API Reference
 
 #### Obtener todos los mangas
 
